@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this dataset or its charts, please cite COLA Insight and the responsible government source."
+title: "COLA Insight Data: 2027 Social Security COLA Data, Charts, and Tools"
+type: dataset
+authors:
+  - name: "COLA Insight Editorial Team"
+version: "2026.10.15"
+date-released: "2026-10-15"
+url: "https://www.colainsight.com/data"
+repository-code: "https://github.com/ge3m0r/colainsight-data"
+license: CC-BY-4.0
+keywords:
+  - Social Security COLA
+  - CPI-W
+  - 2027 COLA
+  - retirement benefits
+contact:
+  - name: "COLA Insight Editorial Team"
+    email: "support@colainsight.com"

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.colainsight.com/schema/cola-record-1.0.json",
+  "title": "COLA Insight public record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "observedAt", "benefitYear", "status", "rate", "cpiW", "sources", "ssaConfirmed", "notes"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "observedAt": { "type": "string", "format": "date-time" },
+    "benefitYear": { "type": "integer", "const": 2027 },
+    "status": { "enum": ["forecast", "computed", "official"] },
+    "rate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["displayed", "forecast", "computed", "official", "unit"],
+      "properties": {
+        "displayed": { "type": ["number", "null"] },
+        "forecast": { "type": ["number", "null"] },
+        "computed": { "type": ["number", "null"] },
+        "official": { "type": ["number", "null"] },
+        "unit": { "const": "percent" }
+      }
+    },
+    "cpiW": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["seriesId", "title", "unit", "baseline", "observations"],
+      "properties": {
+        "seriesId": { "const": "CWUR0000SA0" },
+        "title": { "type": "string" },
+        "unit": { "type": "string" },
+        "baseline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["quarter", "average"],
+          "properties": {
+            "quarter": { "type": "string" },
+            "average": { "type": "number" }
+          }
+        },
+        "observations": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["month", "value", "state"],
+            "properties": {
+              "month": { "type": "string", "pattern": "^2026-(07|08|09)$" },
+              "value": { "type": ["number", "null"] },
+              "state": { "enum": ["published", "pending"] }
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "required": ["cpiW", "retrievedVia", "officialConfirmation"],
+      "properties": {
+        "cpiW": { "$ref": "#/$defs/source" },
+        "retrievedVia": {
+          "type": "object",
+          "required": ["kind", "label", "url"],
+          "properties": {
+            "kind": { "type": "string" },
+            "label": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "officialConfirmation": { "$ref": "#/$defs/source" }
+      }
+    },
+    "ssaConfirmed": { "type": "boolean" },
+    "notes": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["publisher", "url"],
+      "properties": {
+        "publisher": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}
