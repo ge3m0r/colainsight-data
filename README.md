@@ -6,6 +6,10 @@ Open data, calculation notes, charts, and an embeddable widget for tracking the 
 **Current forecast and CPI-W tracker:** [2027 Social Security COLA forecast](https://www.colainsight.com/2027-social-security-cola-forecast)  
 **Public asset library:** [Data, charts, downloads, and widget](https://www.colainsight.com/data)
 
+**Public MCP server:** [Connect an AI assistant](https://www.colainsight.com/mcp-server)
+
+**Official Registry:** [`io.github.ge3m0r/cola-insight`](https://registry.modelcontextprotocol.io/v0/servers/io.github.ge3m0r%2Fcola-insight/versions/1.0.1)
+
 COLA Insight is an independent educational project. It is not affiliated with, endorsed by, or operated by the Social Security Administration (SSA), Bureau of Labor Statistics (BLS), Centers for Medicare & Medicaid Services (CMS), or the U.S. government.
 
 ## What is in this repository
@@ -17,7 +21,8 @@ This repository publishes the parts of COLA Insight that are most useful for ind
 - the public JSON data contract and an example record;
 - calculation methodology and status definitions;
 - publication-ready SVG charts;
-- a copy-and-paste version of the live COLA widget.
+- a copy-and-paste version of the live COLA widget;
+- public MCP distribution metadata and connection documentation.
 
 The production website, Cloudflare Worker deployment, D1 configuration, scheduled refresh system, rate limiting, analytics, and editorial/SEO application source are intentionally maintained separately.
 
@@ -33,6 +38,9 @@ The production website, Cloudflare Worker deployment, D1 configuration, schedule
 | Benefit increase chart | [2027 COLA increase chart](https://www.colainsight.com/2027-cola-benefit-increase-chart) |
 | Embeddable tracker | [Free 2027 COLA widget](https://www.colainsight.com/2027-cola-widget) |
 | Interactive calculator | [2027 COLA calculator](https://www.colainsight.com/2027-cola-calculator) |
+| MCP documentation | [Connect to COLA Insight MCP](https://www.colainsight.com/mcp-server) |
+| MCP endpoint | [`https://www.colainsight.com/mcp`](https://www.colainsight.com/mcp) |
+| Official MCP Registry | [`io.github.ge3m0r/cola-insight`](https://registry.modelcontextprotocol.io/v0/servers/io.github.ge3m0r%2Fcola-insight/versions/1.0.1) |
 
 The files in this repository are publishable snapshots. The permanent URLs above are the authoritative, automatically updated versions.
 
@@ -71,6 +79,14 @@ Embed the live tracker:
   loading="lazy"
 ></iframe>
 ```
+
+Connect an MCP-compatible assistant using the remote Streamable HTTP endpoint:
+
+```text
+https://www.colainsight.com/mcp
+```
+
+The MCP server is public, read-only, and requires no API key. It provides four tools for the current COLA record, educational benefit calculations, preserved snapshot history, and primary sources. See [`mcp/README.md`](mcp/README.md) for the tool list, example configuration, privacy guidance, and versioning policy.
 
 ## Primary sources
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-16
+
+- Added public connection documentation for the COLA Insight MCP server.
+- Added official MCP Registry metadata for `io.github.ge3m0r/cola-insight` version 1.0.1.
+- Documented the four read-only tools, privacy boundaries, rate limit, and versioning policy.
+
 ## 2026-10-15
 
 - Published the initial open-data repository.
