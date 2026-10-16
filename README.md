@@ -41,6 +41,8 @@ The production website, Cloudflare Worker deployment, D1 configuration, schedule
 | MCP documentation | [Connect to COLA Insight MCP](https://www.colainsight.com/mcp-server) |
 | MCP endpoint | [`https://www.colainsight.com/mcp`](https://www.colainsight.com/mcp) |
 | Official MCP Registry | [`io.github.ge3m0r/cola-insight`](https://registry.modelcontextprotocol.io/v0/servers/io.github.ge3m0r%2Fcola-insight/versions/1.0.1) |
+| Smithery directory | [`ge3m0r/cola-insight`](https://smithery.ai/servers/ge3m0r/cola-insight) |
+| Glama connector | [`io.github.ge3m0r/cola-insight`](https://glama.ai/mcp/connectors/io.github.ge3m0r/cola-insight) |
 
 The files in this repository are publishable snapshots. The permanent URLs above are the authoritative, automatically updated versions.
 
