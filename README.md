@@ -6,6 +6,8 @@ Open data, calculation notes, charts, and an embeddable widget for tracking the 
 **Current forecast and CPI-W tracker:** [2027 Social Security COLA forecast](https://www.colainsight.com/2027-social-security-cola-forecast)  
 **Public asset library:** [Data, charts, downloads, and widget](https://www.colainsight.com/data)
 
+**Archived dataset:** [Latest Zenodo record](https://doi.org/10.5281/zenodo.23431338) · [Version 2026.10.16](https://doi.org/10.5281/zenodo.23431339)
+
 **Public MCP server:** [Connect an AI assistant](https://www.colainsight.com/mcp-server)
 
 **Official Registry:** [`io.github.ge3m0r/cola-insight`](https://registry.modelcontextprotocol.io/v0/servers/io.github.ge3m0r%2Fcola-insight/versions/1.0.1)
@@ -33,6 +35,8 @@ The production website, Cloudflare Worker deployment, D1 configuration, schedule
 | Current JSON record | [colainsight.com/api/cola](https://www.colainsight.com/api/cola) |
 | Snapshot history CSV | [2027 COLA history CSV](https://www.colainsight.com/data/2027-cola-history.csv) |
 | Benefit amount CSV | [2027 benefit amounts CSV](https://www.colainsight.com/data/2027-cola-benefit-amounts.csv) |
+| Zenodo dataset | [Latest version (concept DOI)](https://doi.org/10.5281/zenodo.23431338) |
+| Archived version 2026.10.16 | [10.5281/zenodo.23431339](https://doi.org/10.5281/zenodo.23431339) |
 | Preserved revision timeline | [2027 COLA forecast history](https://www.colainsight.com/2027-cola-forecast-history) |
 | CPI-W chart | [2027 COLA CPI-W chart](https://www.colainsight.com/2027-cola-cpi-w-chart) |
 | Benefit increase chart | [2027 COLA increase chart](https://www.colainsight.com/2027-cola-benefit-increase-chart) |
@@ -101,9 +105,11 @@ The source used to retrieve each stored observation is included with the record.
 
 ## Citation
 
-Suggested citation:
+Suggested citation for the archived 2026.10.16 dataset:
 
-> COLA Insight Editorial Team. “COLA Insight Data: 2027 Social Security COLA Data, Charts, and Tools.” 2026. https://www.colainsight.com/data
+> COLA Insight. (2026). *COLA Insight 2027 Social Security COLA Dataset: CPI-W History and Benefit Amount Table* (Version 2026.10.16). Zenodo. https://doi.org/10.5281/zenodo.23431339
+
+Use the [concept DOI](https://doi.org/10.5281/zenodo.23431338) when linking to the latest available version, and the [version DOI](https://doi.org/10.5281/zenodo.23431339) when citing this exact release.
 
 For machine-readable citation metadata, see [`CITATION.cff`](CITATION.cff). Questions and corrections can be sent to [support@colainsight.com](mailto:support@colainsight.com).
 
